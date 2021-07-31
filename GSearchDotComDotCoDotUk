@@ -1,0 +1,55 @@
+@-moz-document regexp("https?://www\\.google\\.com/search.+"), regexp("https?://www\\.google\\.com/.*#q=.+"), regexp("https?://www\\.google\\.co.uk/search.+"), regexp("https?://www\\.google\\.co.uk/.*#q=.+") {
+/*NEED f11 or almost fullscreen of width to see 3 columns*/
+
+
+#cnt #center_col {
+    width: 1640px !important;
+	left:-180px !important;
+}/*1920 and -180*/
+
+#rso {
+    -webkit-column-count: 3 !important;
+    -webkit-column-gap:   3px;
+    -moz-column-count:    3 !important;
+    -moz-column-gap:      3px;
+    column-count:         3 !important;
+    column-gap:           3px;
+}
+
+#rso .rgsep {
+    display: none;
+}
+
+li.g {
+    display: inline-block;
+}
+
+.g {
+
+	padding:0 !important;
+	margin:0 !important;
+	-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+	width: 99% !important;
+}
+
+.g:hover{
+/* 	top:0 !important; */
+
+	padding:0;
+	margin:0;
+	line-height:1.1em !important;
+	padding-top:10px !important;
+}
+/*This was in 217 not 2021, it make appears double scrollbar with my script and decal 1 px after footer then page is unscrollable*/
+/* #rhs_block, #footcnt {
+    display: none !important;
+} */
+
+#extrares {
+    margin-top: 16px;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+}
