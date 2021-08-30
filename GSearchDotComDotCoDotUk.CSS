@@ -1,9 +1,9 @@
 @-moz-document regexp("https?://www\\.google\\.com/search.+"), regexp("https?://www\\.google\\.com/.*#q=.+"), regexp("https?://www\\.google\\.co.uk/search.+"), regexp("https?://www\\.google\\.co.uk/.*#q=.+") {
-/*NEED f11 or almost fullscreen of width to see 3 columns*/
+	/*NEED f11 or almost fullscreen of width to see 3 columns*/
 
 
 #cnt #center_col {
-    width: 1640px !important;
+    width: 1840px !important;
 	left:-180px !important;
 }/*1920 and -180*/
 
@@ -16,22 +16,23 @@
     column-gap:           3px;
 }
 
+/*
 #rso .rgsep {
     display: none;
-}
+}*/
 
-li.g {
+li.g,.liner-filter-component {
     display: inline-block;
 }
 
-.g {
+.g,.liner-filter-component {
 
 	padding:0 !important;
 	margin:0 !important;
 	-webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
-	width: 99% !important;
+	/*width: 99% !important;*/
 }
 
 .g:hover{
