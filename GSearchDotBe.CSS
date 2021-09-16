@@ -1,12 +1,17 @@
-@-moz-document regexp("https?://www\\.google\\.be/.*#q=.+"), regexp("https?://www\\.google\\.be/search.+") {
+@-moz-document regexp(".*:\\/\\/(?!(.*google.*search.+|.*google.*#q=.+)).*(google.*tbm=lcl.*|google.*/maps/.*)") {
+/*FIRST LINE ADDED NEW EXCEPTIONS FOR OCCASION*/
+/*NEW LINE@-moz-document regexp(".*:\\/\\/(?!(.*google.*search.+|.*google.*#q=.+)).*") {*/
+/*WAS THE OLD LINE@-moz-document regexp("https?://www\\.google\\.be/search.+"), regexp("https?://www\\.google\\.be/.*#q=.+") {*/
+
+/*cnt found in elements of dev tools and center_col not as css found in the tab source*/
 #cnt #center_col {
-    width: 1850px !important;/*1750 fine for zoom80 at great width in a 1080 resolution,1650 better at 100%, but with liner chrome plugin we could need until 1950*/
-	left:-180px !important;
+    width: 1850px !important;/*1750 fine for zoom80 at great width in a 1080 resolution,1650 better at 100%, butwith liner chrome plugin we could need until 1950*/
+    left:-180px !important;
 }
 
 /*#cnt #center_col:has(+div){
-	width: 1950px !important;
-	color:red;
+    width: 1950px !important;
+    color:red;
 }*/
 
 #rso {
@@ -43,4 +48,3 @@ li.g,.liner-filter-component {
     border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 }
-
